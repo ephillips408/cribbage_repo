@@ -100,11 +100,12 @@ def find_flush(list):
 
     score = 0
     
-    if list[3::-1] == list[0:-1]: score += 4
+    if list[3::-1] == list[0:-1] and list[0] == list[1]: score += 4
     if list[::-1] == list[0::] and score != 0: score += 1
 
     return score
 
-val_test_hand = [10,10,5,5,10]
-straight_rank_test_hand = sorted([5,7,10,12,13])
-test_flush = ["D", "D", "D", "D", "C"]
+# Lists that are used to test the functions
+# val_test_hand = [10,10,5,5,10]
+# straight_rank_test_hand = sorted([5,7,10,12,13])
+# test_flush = ["D", "D", "C", "D", "D"]
