@@ -1,5 +1,4 @@
 import random
-import itertools
 import scoring as score
 
 values = {
@@ -69,10 +68,10 @@ class Deck:
 
 class Player:
 
-    def __init__(self, is_dealer):
+    def __init__(self):
 
         self.hand = []
-        self.is_dealer = is_dealer
+        self.is_dealer = None
         self.score = 0
 
     def discard_two(self, list, indices):
@@ -83,6 +82,6 @@ class Player:
 
 def find_score(list_one, list_two, list_three):
     
-    #list_one will represent the value list, list two will represent the straight rank list, and list three is the suit list
+    #list_one will represent the value list, list two will represent the straight rank list, and list three is the suit list.
     points = score.find_fifteens(list_one) + score.find_matches(list_two) + score.find_straights(list_two) + score.find_flush(list_three)
     return points

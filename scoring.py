@@ -6,9 +6,9 @@ def find_fifteens(list):
     scoring_sum = 15
     fifteen_score = 0
     for L in range (0, len(list) + 1):
-        # Find all combinations in the hand
+        # Find all combinations in the hand.
         for subset in itertools.combinations(list, L):
-            # Checks for sum of 15 for each subset
+            # Checks for sum of 15 for each subset.
             b = sum(int(i) for i in subset)
             if b == scoring_sum:
                 fifteen_score += 2
@@ -105,7 +105,7 @@ def find_flush(list):
 
     return score
 
-# Lists that are used to test the functions
+# Lists that are used to test the functions.
 # val_test_hand = [10,10,5,5,10]
 # straight_rank_test_hand = sorted([5,7,10,12,13])
 # test_flush = ["D", "D", "C", "D", "D"]

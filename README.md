@@ -4,3 +4,6 @@ This is a program that can calculate the score of a cribbage hand, assuming that
 
 Second Commit:
     Fixed a bug with the find_flush function.
+
+Third Commit:
+    Added the ability to play multiple times. Also, added the play_options.py file for future play options, and to make sure that the game_logic file does not become too cluttered.
