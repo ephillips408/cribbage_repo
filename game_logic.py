@@ -6,9 +6,7 @@ import sys
 
 def run_game():
 
-    player_type_chosen = False
-
-    while player_type_chosen == False:
+    while True:
 
         player_type = input("Play as the dealer ('D') or not dealer ('ND')? To exit, type 'stop': ")
 
@@ -16,19 +14,17 @@ def run_game():
             
             game_player.is_dealer = False
             dummy_player.is_dealer = False # Allows for a better representation of the odds of what card is flipped.
-            player_type_chosen == True
             break
 
         elif player_type == 'D':
 
             game_player.is_dealer = True
             dummy_player.is_dealer = False
-            player_type_chosen == True
             print ("Not yet supported.")
+            continue
 
         elif player_type == 'stop':
 
-            player_type_chosen == True
             break
 
         else:

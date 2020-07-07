@@ -10,8 +10,21 @@ def player_not_dealer(player_one, player_two, deck):
     for card in player_one.hand:
         print (str(card))
 
-    discards = list(input("Enter which cards to discard, separated by a comma: "))
-    indices = [ int(entry)-1 for entry in discards if entry.isdigit() == True ]
+    while True:
+
+        discards = list(input("Enter which two cards to discard, separated by a comma: "))
+        indices = [ int(entry)-1 for entry in discards if entry.isdigit() == True ]
+
+        if len(indices) == 0:
+            print ("Unrecognized input.")
+            continue
+        
+        elif len(indices) != 2:
+            print ("Must discard two.")
+            continue
+
+        else:
+            break 
 
     player_one.discard_two(player_one.hand, indices)
 

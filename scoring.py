@@ -63,7 +63,7 @@ def find_straights(list):
 
         unique_elements = sorted(set(list))
         # If all of the elements in the set are unique, and the last number is equal to 4 plus the first number, the set is a straight of length 5.
-        if len(unique_elements) == len(list) and unique_elements[-1] == unique_elements[0] + 4:
+        if len(unique_elements) == len(list) and unique_elements[-1] == unique_elements[0]+4:
             score += 5
             found_straight = True 
             return score

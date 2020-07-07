@@ -76,9 +76,18 @@ class Player:
 
     def discard_two(self, list, indices):
 
-        rev_indices = indices[::-1] #Reversed to allow for accurately deleting list elements.
-        for entry in rev_indices:
-            del list[entry]
+        # Fix the issue when a user inputs a higher number before a lower number.
+
+        if indices[0] > indices[-1]:
+
+            for entry in indices:
+                del list[entry]
+
+        else:
+
+            rev_indices = indices[::-1] #Reversed to allow for accurately deleting list elements.
+            for entry in rev_indices:
+                del list[entry]
 
 def find_score(list_one, list_two, list_three):
     

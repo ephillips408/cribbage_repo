@@ -7,3 +7,6 @@ Second Commit:
 
 Third Commit:
     Added the ability to play multiple times. Also, added the play_options.py file for future play options, and to make sure that the game_logic file does not become too cluttered.
+
+Fourth Commit:
+    Altered the player_not_dealer function to force the discard of two cards. Also, cleaned up the run_game function in game_logic.py, and fixed a bug where the non-dealer player chose their discards with a higher number followed by a lower number.
